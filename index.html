@@ -1,43 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Form</title>
-        <link rel="stylesheet" href="styles/style.css" />
-    </head>
 
-    <body>
-        <div class="page-container">
-            <div class="splash">
-                <div class="splash-banner">
-                    <div class="splash-logo"></div>
-                    <h1 class="splash-title"></h1>
-                </div>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+    <div class="page-container">
+        <div class="splash">
+            <div class="splash-banner">
+                <div class="splash-logo"></div>
+                <h1 class="splash-title">Sign up</h1>
             </div>
-            <div class="page-infoContainer">
-                <p class="intro">Lorum Ipsum</p>
+        </div>
+
+        <div class="pageInfo-container">
+            <div class="intro-container">
+                <p class="intro">Lorum Ipsum Lorum Ipsum Lorum Ipsum Lorum Ipsum Lorum Ipsum Lorum Ipsum Lorum Ipsum
+                    Lorum
+                    Ipsum</p>
                 <p class="intro">You know you want to.</p>
             </div>
+
             <form action="" class="form">
                 <p class="form-intro">Let's do this!</p>
-                <div class="form-inputGroup">
-                    <label for="firstName"
-                        >FIRST NAME<input
-                            type="text"
-                            name=""
-                            id="firstName"
-                            class="form-name"
-                            required="required"
-                        /><span class="error">X error text test</span></label
-                    >
+                <div class="form-inputsContainer">
+                    <div class="form-inputGroup">
+                        <label for="firstName">
+                            <span class="form-label">FIRST NAME</span>
+                            <input type="text" class="form-input form-name form-input-invalid" name="" id="firstName"
+                                required="required">
+                            <span class="form-errorText form-errorText-visible">X error text test</span>
+                        </label>
+                    </div>
+                    <div class="form-inputGroup">
+                        <label for="lastName">
+                            <span class="form-label">LAST NAME</span>
+                            <input type="text" class="form-input form-name" name="" id="lastName" required="required">
+                            <span class="form-errorText">X error text test</span>
+                        </label>
+                    </div>
                 </div>
             </form>
-            <button class="pageInfo-createAccountButton">Create Account</button>
-            <p class="pageInfo-loginText">Already have an account?</p>
+
+            <div class="submit-container">
+                <button class="submit-submitButton">Create Account</button>
+                <p class="submit-loginText">Already have an account?</p>
+                <a class="submit-loginLink" href="#">Log in</a>
+            </div>
         </div>
-        <a class="pageInfo-loginLink">Log in</a>
-        <script src="scripts/script.js"></script>
-    </body>
+    </div>
+    <script src="scripts/script.js"></script>
+</body>
+
 </html>

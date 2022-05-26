@@ -4,6 +4,8 @@
 
 #### TO-DO NEXT
 
+-   write basic isValid() function
+
 #### TO-DO LATER
 
 ##### Features
@@ -12,12 +14,20 @@
 
 ##### Style
 
+-   touch up the responsive form grid for a less awkward mid-point
+
 #### DONE
+
+_0.1.0_
+
+-   add all the form fields
+-   add responsive grid so there are two columns if it's wide enough
 
 _0.0.2_
 
 -   fix README formatting
 -   adjust styling
+-   fix splash so it doesn't fuck up from adjacent form being too long
 
 _0.0.1_
 

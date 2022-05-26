@@ -44,6 +44,56 @@
                             <span class="form-errorText">X error text test</span>
                         </label>
                     </div>
+                    <div class="form-inputGroup">
+                        <label for="email">
+                            <span class="form-label">EMAIL</span>
+                            <input type="email" class="form-input form-email" id="email" required="required">
+                            <span class="form-errorText">X email error text</span>
+                        </label>
+                    </div>
+                    <div class="form-inputGroup">
+                        <label for="phone">
+                            <span class="form-label">PHONE NUMBER</span>
+                            <input type="number" class="form-input form-phone" id="phone" min="10" required="required">
+                            <span class="form-errorText">X phone error text</span>
+                        </label>
+                    </div>
+                    <div class="form-inputGroup">
+                        <label for="zip">
+                            <span class="form-label">ZIP CODE</span>
+                            <input type="number" class="form-input form-zip" id="zip" min="00000" max="99999"
+                                required="required">
+                            <span class="form-errorText">X zip error</span>
+                        </label>
+                    </div>
+                    <div class="form-inputGroup">
+                        <label for="country">
+                            <span class="form-label">COUNTRY</span>
+                            <input type="text" class="form-input form-country" pattern="[\w\s-.']+" required="required">
+                            <span class="form-errorText">X country error</span>
+                        </label>
+                    </div>
+                    <div class="form-inputGroup">
+                        <label for="password">
+                            <span class="form-label">PASSWORD</span>
+                            <input type="password" class="form-input form-password" id="password" required="required">
+                            <span class="form-errorText form-passwordReq">Must contain at least:</span>
+                            <span class="form-errorText form-passwordReq">12 characters</span>
+                            <span class="form-errorText form-passwordReq">1 uppercase letter</span>
+                            <span class="form-errorText form-passwordReq">1 lowercase number</span>
+                            <span class="form-errorText form-passwordReq">1 number</span>
+                            <span class="form-errorText form-passwordReq">1 special character (not a letter or
+                                number)</span>
+                        </label>
+                    </div>
+                    <div class="form-inputGroup">
+                        <label for="confirmPassword">
+                            <span class="form-label">CONFIRM PASSWORD</span>
+                            <input type="password" class="form-input form-confirmPassword" id="confirmPassword"
+                                required="required">
+                            <span class="form-errorText form-passwordReq">Passwords must match</span>
+                        </label>
+                    </div>
                 </div>
             </form>
 

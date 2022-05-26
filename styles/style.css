@@ -29,6 +29,7 @@ body {
 @media only screen and (min-width: 700px) {
     .page-container {
         display: flex;
+        align-items: stretch;
     }
 }
 /* --- SPLASH START --- */
@@ -37,6 +38,13 @@ body {
     height: 100vh;
     background: rgb(0, 104, 0);
     color: rgb(225, 225, 225);
+}
+@media only screen and (min-width: 700px) {
+    .splash {
+        width: clamp(30rem, 38%, 60rem);
+        height: auto;
+        flex-shrink: 0;
+    }
 }
 .splash-banner {
     position: relative;
@@ -51,12 +59,6 @@ body {
 .splash-title {
     font-size: 5rem;
     font-family: Georgia, "Times New Roman", Times, serif;
-}
-@media only screen and (min-width: 700px) {
-    .splash {
-        width: clamp(30rem, 38%, 60rem);
-        flex-shrink: 0;
-    }
 }
 /* --- SPLASH END --- */
 
@@ -80,6 +82,16 @@ body {
 .form-intro {
     margin-bottom: 1.6rem;
 }
+.form-inputsContainer {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1.3rem;
+}
+@media only screen and (min-width: 600px) {
+    .form-inputsContainer {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
 .form-inputGroup {
     width: min-content;
     display: flex;
@@ -102,12 +114,29 @@ body {
 .form-input-invalid {
     border-color: var(--clr-error);
 }
+.form-zip {
+    width: 8ch;
+}
 .form-errorText {
-    margin-top: 0.2rem;
+    margin-top: 0.4rem;
     display: block;
     font-size: 1.6rem;
     color: var(--clr-error);
     visibility: hidden;
+}
+.form-passwordReq {
+    position: relative;
+    margin-left: 2rem;
+    color: grey;
+    visibility: visible;
+}
+.form-password + .form-passwordReq {
+    margin-left: 0;
+}
+.form-passwordReq:not(.form-password + .form-passwordReq)::before {
+    content: "x";
+    position: absolute;
+    left: -2rem;
 }
 .form-errorText-visible {
     visibility: visible;

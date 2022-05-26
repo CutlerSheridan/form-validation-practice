@@ -111,6 +111,9 @@ body {
 .form-input:focus {
     outline-color: rgb(0, 104, 0);
 }
+.form-input:invalid {
+    background: red;
+}
 .form-input-invalid {
     border-color: var(--clr-error);
 }
@@ -123,6 +126,9 @@ body {
     font-size: 1.6rem;
     color: var(--clr-error);
     visibility: hidden;
+}
+.form-errorText-visible {
+    visibility: visible;
 }
 .form-passwordReq {
     position: relative;
@@ -137,9 +143,6 @@ body {
     content: "x";
     position: absolute;
     left: -2rem;
-}
-.form-errorText-visible {
-    visibility: visible;
 }
 /* --- FORM END --- */
 

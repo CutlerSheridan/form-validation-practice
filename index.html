@@ -54,22 +54,23 @@
                     <div class="form-inputGroup">
                         <label for="phone">
                             <span class="form-label">PHONE NUMBER</span>
-                            <input type="number" class="form-input form-phone" id="phone" min="10" required="required">
+                            <input type="text" class="form-input form-phone" id="phone" minlength="10"
+                                required="required">
                             <span class="form-errorText">X phone error text</span>
                         </label>
                     </div>
                     <div class="form-inputGroup">
                         <label for="zip">
                             <span class="form-label">ZIP CODE</span>
-                            <input type="number" class="form-input form-zip" id="zip" min="00000" max="99999"
-                                required="required">
+                            <input type="text" class="form-input form-zip" id="zip" pattern="\d{5}" required="required">
                             <span class="form-errorText">X zip error</span>
                         </label>
                     </div>
                     <div class="form-inputGroup">
                         <label for="country">
                             <span class="form-label">COUNTRY</span>
-                            <input type="text" class="form-input form-country" pattern="[\w\s-.']+" required="required">
+                            <input type="text" class="form-input form-country" pattern="[a-zA-ZÀ-ž\s.'‘’-]+"
+                                required="required">
                             <span class="form-errorText">X country error</span>
                         </label>
                     </div>

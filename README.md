@@ -18,6 +18,10 @@
 
 #### DONE
 
+_0.1.1_
+
+-   add html pattern regex for zip code and country
+
 _0.1.0_
 
 -   add all the form fields

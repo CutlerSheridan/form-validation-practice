@@ -111,38 +111,45 @@ body {
 .form-input:focus {
     outline-color: rgb(0, 104, 0);
 }
-.form-input:invalid {
-    background: red;
-}
-.form-input-invalid {
+.form-inputGroup-invalid > .form-input {
     border-color: var(--clr-error);
 }
 .form-zip {
     width: 8ch;
 }
-.form-errorText {
+.form-errorText,
+.form-passwordReq {
+    position: relative;
     margin-top: 0.4rem;
+    margin-left: 2rem;
     display: block;
     font-size: 1.6rem;
+}
+.form-errorText {
     color: var(--clr-error);
     visibility: hidden;
 }
-.form-errorText-visible {
+.form-inputGroup-invalid > .form-errorText {
     visibility: visible;
 }
 .form-passwordReq {
-    position: relative;
-    margin-left: 2rem;
     color: grey;
     visibility: visible;
 }
 .form-password + .form-passwordReq {
     margin-left: 0;
 }
+.form-errorText::before,
 .form-passwordReq:not(.form-password + .form-passwordReq)::before {
     content: "x";
     position: absolute;
     left: -2rem;
+}
+.form-passwordReq-valid {
+    color: green;
+}
+.form-passwordReq-valid.form-passwordReq:not(.form-password + .form-passwordReq)::before {
+    content: "✔";
 }
 /* --- FORM END --- */
 

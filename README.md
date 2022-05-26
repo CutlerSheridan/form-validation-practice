@@ -4,7 +4,7 @@
 
 #### TO-DO NEXT
 
--   write basic isValid() function
+-   write more validation functions
 
 #### TO-DO LATER
 
@@ -17,6 +17,13 @@
 -   touch up the responsive form grid for a less awkward mid-point
 
 #### DONE
+
+_0.2.0_
+
+-   write base isFieldValid() function
+-   write isNameValid()
+-   get isFieldValid() working with FIRST NAME field
+-   add eventListener logic so initially it only checks for errors upon blur, then, if it's invalid, it checks after every keystroke, then if it becomes valid again and blurs, it only checks on the next blur, and so on
 
 _0.1.1_
 

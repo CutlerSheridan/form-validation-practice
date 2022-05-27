@@ -4,8 +4,6 @@
 
 #### TO-DO NEXT
 
--   make Submit button check everything again
-
 #### TO-DO LATER
 
 ##### Features
@@ -17,6 +15,11 @@
 -   touch up the responsive form grid for a less awkward mid-point
 
 #### DONE
+
+_0.4.0_
+
+-   make Submit button check everything again
+-   make submit button add "input" event listener so typing in one of them will check every keystroke
 
 _0.3.0_
 

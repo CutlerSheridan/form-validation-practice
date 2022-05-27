@@ -22,7 +22,7 @@ const isFieldValid = (inputOrEvent) => {
 
     if (!isValid) {
         input.parentElement.classList.add("form-inputGroup-invalid");
-        if (inputOrEvent.type === "blur") {
+        if (inputOrEvent.type === "blur" || !inputOrEvent.target) {
             input.addEventListener("input", isFieldValid);
         }
     } else {
@@ -94,6 +94,21 @@ const isConfirmPasswordValid = () => {
     }
     return isValid;
 };
+const handleSubmit = (e) => {
+    const nonPasswordInputs = document.querySelectorAll(".form-input");
+    let formIsComplete = true;
+    nonPasswordInputs.forEach((input) => {
+        if (!isFieldValid(input)) {
+            formIsComplete = false;
+        }
+    });
+    isPasswordValid();
+    if (!formIsComplete) {
+        e.preventDefault();
+    } else {
+        e.target.textContent = "Success!";
+    }
+};
 
 const inputs = document.querySelectorAll(".form-input");
 for (let i = 0; i < inputs.length; i++) {
@@ -101,3 +116,6 @@ for (let i = 0; i < inputs.length; i++) {
 }
 inputs[inputs.length - 2].addEventListener("input", isPasswordValid);
 inputs[inputs.length - 1].addEventListener("input", isConfirmPasswordValid);
+
+const submit = document.querySelector(".submit-submitButton");
+submit.addEventListener("mouseup", handleSubmit);

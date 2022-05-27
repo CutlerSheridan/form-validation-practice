@@ -76,7 +76,7 @@ body {
 
 /* --- FORM START --- */
 .form {
-    padding: 1.2rem var(--pageInfo-horizontalSpace);
+    padding: 1.6rem var(--pageInfo-horizontalSpace);
     background: white;
 }
 .form-intro {
@@ -112,7 +112,7 @@ body {
     letter-spacing: 0.1rem;
 }
 .form-input:focus {
-    outline-color: rgb(0, 104, 0);
+    /* outline-color: rgb(0, 104, 0); */
 }
 .form-inputGroup-invalid > .form-input {
     border-color: var(--clr-error);

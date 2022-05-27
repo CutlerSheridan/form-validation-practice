@@ -4,7 +4,7 @@
 
 #### TO-DO NEXT
 
--   write more validation functions
+-   make Submit button check everything again
 
 #### TO-DO LATER
 
@@ -17,6 +17,17 @@
 -   touch up the responsive form grid for a less awkward mid-point
 
 #### DONE
+
+_0.3.0_
+
+-   flesh out isFieldValid()
+-   write isPasswordValid()
+-   write isConfirmPasswordValid()
+-   if Confirm Password is unmatched, make typing in Password check if Confirm Password becomes a match
+-   make Confirm Password field lose invalid group styling if typing in Password and it matches
+-   prevent Confirm Password from being valid if empty
+-   make Password only change Confirm Password state if CP has already been deemed invalid
+-   make Password also change Confirm Password state if CP has already been deemed valid
 
 _0.2.0_
 

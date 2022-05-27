@@ -33,36 +33,36 @@
                         <label for="firstName">
                             <span class="form-label">FIRST NAME</span>
                             <input type="text" class="form-input form-name" name="" id="firstName" required="required">
-                            <span class="form-errorText">X error text test</span>
+                            <span class="form-errorText">Please enter your first name</span>
                         </label>
                     </div>
                     <div class="form-inputGroup">
                         <label for="lastName">
                             <span class="form-label">LAST NAME</span>
                             <input type="text" class="form-input form-name" name="" id="lastName" required="required">
-                            <span class="form-errorText">X error text test</span>
+                            <span class="form-errorText">Please enter your last name</span>
                         </label>
                     </div>
                     <div class="form-inputGroup">
                         <label for="email">
                             <span class="form-label">EMAIL</span>
                             <input type="email" class="form-input form-email" id="email" required="required">
-                            <span class="form-errorText">X email error text</span>
+                            <span class="form-errorText">Please enter a valid email address</span>
                         </label>
                     </div>
                     <div class="form-inputGroup">
                         <label for="phone">
                             <span class="form-label">PHONE NUMBER</span>
                             <input type="text" class="form-input form-phone" id="phone" minlength="10"
-                                required="required">
-                            <span class="form-errorText">X phone error text</span>
+                                pattern=".*(\d{3})[^0-9]*(\d{3})[^0-9]*(\d{4})[^a-zA-Z0-9]?" required="required">
+                            <span class="form-errorText">Please enter your phone number</span>
                         </label>
                     </div>
                     <div class="form-inputGroup">
                         <label for="zip">
                             <span class="form-label">ZIP CODE</span>
                             <input type="text" class="form-input form-zip" id="zip" pattern="\d{5}" required="required">
-                            <span class="form-errorText">X zip error</span>
+                            <span class="form-errorText">Please enter a valid zip code</span>
                         </label>
                     </div>
                     <div class="form-inputGroup">
@@ -70,7 +70,7 @@
                             <span class="form-label">COUNTRY</span>
                             <input type="text" class="form-input form-country" pattern="[a-zA-ZÀ-ž\s.'‘’-]+"
                                 required="required">
-                            <span class="form-errorText">X country error</span>
+                            <span class="form-errorText">Please enter your country</span>
                         </label>
                     </div>
                     <div class="form-inputGroup">
@@ -78,12 +78,12 @@
                             <span class="form-label">PASSWORD</span>
                             <input type="password" class="form-input form-password" id="password" required="required">
                             <span class="form-errorText form-passwordReq">Must contain at least:</span>
-                            <span class="form-errorText form-passwordReq">12 characters</span>
-                            <span class="form-errorText form-passwordReq">1 uppercase letter</span>
-                            <span class="form-errorText form-passwordReq">1 lowercase number</span>
-                            <span class="form-errorText form-passwordReq">1 number</span>
-                            <span class="form-errorText form-passwordReq">1 special character (not a letter or
-                                number)</span>
+                            <span class="form-errorText form-passwordReq req-length">12 characters</span>
+                            <span class="form-errorText form-passwordReq req-uppercase">1 uppercase letter</span>
+                            <span class="form-errorText form-passwordReq req-lowercase">1 lowercase letter</span>
+                            <span class="form-errorText form-passwordReq req-number">1 number</span>
+                            <span class="form-errorText form-passwordReq req-special">1 special character (not a letter
+                                or number)</span>
                         </label>
                     </div>
                     <div class="form-inputGroup">

@@ -110,6 +110,10 @@ const handleSubmit = (e) => {
     }
 };
 
+const splash = document.querySelector(".splash");
+const splashHeight = window.innerHeight + "px";
+const splashHeightVariable = document.querySelector(":root").style.setProperty("--splash-height", splashHeight);
+// splash.style.height = window.innerHeight + "px";
 const inputs = document.querySelectorAll(".form-input");
 for (let i = 0; i < inputs.length; i++) {
     inputs[i].addEventListener("blur", isFieldValid);

@@ -2,6 +2,12 @@
 
 ## Fill out the form and it should validate appropriately
 
+Each field waits to validate until you leave that field, then shows a warning if the field is invalid. Then, if you return to the field, it checks for validity after every keystroke. Once rendered valid and user has moved to another field, if user returns to that field, it does not check for validity again until user leaves that field again, under the assumption user understands validity constraints due to their previous valid input.
+
+The exceptions to this are Password and Confirm Password, each of which always checks every keystroke to indicate which requirements have been met. Once anything has been entered in Confirm Password, every future keystroke in Password also updates the "passwords match" requirement under Confirm Password.
+
+Layout is responsive. Displays differently on mobile vs. desktop.
+
 #### TO-DO NEXT
 
 #### TO-DO LATER
@@ -12,9 +18,18 @@
 
 ##### Style
 
--   touch up the responsive form grid for a less awkward mid-point
-
 #### DONE
+
+_0.5.0_
+
+-   adjust intro text max-width
+-   adjust layout change breakpoint
+-   add drop-shadow to focused field
+-   add splash image
+-   adjust splash image height
+-   add splash credit
+-   create color scheme
+-   add form credit
 
 _0.4.0_
 

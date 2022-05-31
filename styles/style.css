@@ -1,11 +1,19 @@
 :root {
+    --clr-pri: rgb(50, 50, 60);
+    --clr-sec: rgb(200, 200, 200);
     --clr-error: crimson;
-    --clr-text: rgb(30, 30, 30);
+    --clr-valid: green;
+    --clr-text-dark: rgb(30, 30, 30);
+    --clr-text-light: rgb(225, 225, 225);
+    --clr-grey: rgb(128, 128, 128);
+    --clr-grey-light: rgb(200, 200, 200);
+    --clr-grey-dark: rgb(110, 110, 110);
+    --splash-height: ; /* see javascript */
     --pageInfo-horizontalSpace: 3rem;
     font-size: 62.5%;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
-@media only screen and (min-width: 700px) {
+@media only screen and (min-width: 900px) {
     :root {
         --pageInfo-horizontalSpace: 5rem;
     }
@@ -22,11 +30,10 @@ body {
     height: 100%;
     width: 100%;
     font-size: 2.5rem;
-    background: orange;
-    color: var(--clr-text);
+    background: var(--clr-pri);
 }
 
-@media only screen and (min-width: 700px) {
+@media only screen and (min-width: 900px) {
     .page-container {
         display: flex;
         align-items: stretch;
@@ -34,12 +41,16 @@ body {
 }
 /* --- SPLASH START --- */
 .splash {
+    position: relative;
     width: 100%;
-    height: 100vh;
-    background: rgb(0, 104, 0);
-    color: rgb(225, 225, 225);
+    height: var(--splash-height);
+    background: url("/images/galaxy.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: var(--clr-text-light);
 }
-@media only screen and (min-width: 700px) {
+@media only screen and (min-width: 900px) {
     .splash {
         width: clamp(30rem, 38%, 60rem);
         height: auto;
@@ -60,11 +71,25 @@ body {
     font-size: 5rem;
     font-family: Georgia, "Times New Roman", Times, serif;
 }
+.credit {
+    position: absolute;
+    margin-left: 2rem;
+    bottom: 2rem;
+    font-size: 1.4rem;
+    color: var(--clr-grey-light);
+}
+.credit-form {
+    margin-top: 0.5rem;
+}
 /* --- SPLASH END --- */
 
 /* --- INTRO START --- */
+.pageInfo-container {
+    width: 100%;
+    color: var(--clr-text-light);
+}
 .intro-container {
-    margin: 3rem var(--pageInfo-horizontalSpace);
+    margin: 4.2rem var(--pageInfo-horizontalSpace);
 }
 .intro:not(:last-child) {
     margin-bottom: 2rem;
@@ -72,17 +97,22 @@ body {
 .intro:last-child {
     margin-bottom: 4rem;
 }
+.intro {
+    max-width: 55ch;
+}
 /* --- INTRO END --- */
 
 /* --- FORM START --- */
 .form {
     padding: 1.6rem var(--pageInfo-horizontalSpace);
     background: white;
+    color: var(--clr-text-dark);
 }
 .form-intro {
     margin-bottom: 1.6rem;
 }
 .form-inputsContainer {
+    width: min(100%, 65rem);
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     gap: 1.3rem;
@@ -106,13 +136,13 @@ body {
 }
 .form-input {
     padding: 0.75rem 0.75rem;
-    border: 1px solid rgb(201, 201, 201);
+    border: 1px solid var(--clr-grey-light);
     border-radius: 0.7rem;
     font-size: 2rem;
     letter-spacing: 0.1rem;
 }
 .form-input:focus {
-    /* outline-color: rgb(0, 104, 0); */
+    box-shadow: 3px 3px 5px 1px var(--clr-grey-light);
 }
 .form-inputGroup-invalid > .form-input {
     border-color: var(--clr-error);
@@ -135,11 +165,14 @@ body {
     color: var(--clr-error);
     visibility: hidden;
 }
+.form-errorText:not(.req-special) {
+    width: max-content;
+}
 .form-inputGroup-invalid > .form-errorText {
     visibility: visible;
 }
 .form-passwordReq {
-    color: grey;
+    color: var(--clr-grey);
     visibility: visible;
 }
 .form-password + .form-passwordReq {
@@ -155,7 +188,7 @@ body {
     color: var(--clr-error);
 }
 .form-passwordReq-valid {
-    color: green;
+    color: var(--clr-valid);
 }
 .form-passwordReq-valid.form-passwordReq:not(.form-password + .form-passwordReq)::before {
     content: "✔";
@@ -167,7 +200,7 @@ body {
     margin: 2rem var(--pageInfo-horizontalSpace);
 }
 .submit-submitButton {
-    margin: 2rem 0 3.6rem 0;
+    margin: 1rem 0 1.4rem 0;
     height: 7rem;
     width: calc(14ch + 10rem);
     border: none;
@@ -175,17 +208,19 @@ body {
     font-size: 1.8rem;
     font-weight: bold;
     cursor: pointer;
-    background: pink;
-    box-shadow: 5px 5px 10px 1px rgb(225, 225, 225, 0.3);
+    background: var(--clr-grey);
+    box-shadow: 3px 3px 5px 1px rgb(200, 200, 200, 0.3);
+    color: var(--clr-text-light);
 }
 @media only screen and (hover: hover) {
     .submit-submitButton:hover {
-        background: rgb(215, 161, 170);
+        background: var(--clr-grey-dark);
         box-shadow: none;
+        color: var(--clr-text-light);
     }
 }
 .submit-loginText {
-    font-size: 2rem;
+    font-size: 1.6rem;
 }
 .submit-loginLink {
     margin-left: 1rem;

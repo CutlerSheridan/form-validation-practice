@@ -20,6 +20,10 @@ Layout is responsive. Displays differently on mobile vs. desktop.
 
 #### DONE
 
+_1.0.1_
+
+-   fix splash image path
+
 _1.0.0_
 
 -   change splash font

@@ -46,7 +46,7 @@ body {
     position: relative;
     width: 100%;
     height: var(--splash-height);
-    background: url("/images/galaxy.jpg");
+    background: url("../images/galaxy.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;

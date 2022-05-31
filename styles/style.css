@@ -1,6 +1,8 @@
 :root {
     --clr-pri: rgb(50, 50, 60);
-    --clr-sec: rgb(200, 200, 200);
+    --clr-sec: rgb(213, 116, 75);
+    --clr-sec-shadow: rgb(213, 116, 75, 0.5);
+    --clr-sec-dark: rgb(199, 104, 63);
     --clr-error: crimson;
     --clr-valid: green;
     --clr-text-dark: rgb(30, 30, 30);
@@ -53,7 +55,6 @@ body {
 @media only screen and (min-width: 900px) {
     .splash {
         width: clamp(30rem, 38%, 60rem);
-        height: auto;
         flex-shrink: 0;
     }
 }
@@ -68,8 +69,11 @@ body {
     background: rgb(22, 22, 22, 0.5);
 }
 .splash-title {
-    font-size: 5rem;
-    font-family: Georgia, "Times New Roman", Times, serif;
+    font-size: 7rem;
+    font-family: "Libre Barcode 39 Extended Text", cursive;
+    font-weight: lighter;
+    /* font-family: "Londrina Outline", cursive; */
+    /* font-family: "MuseoModerno", cursive; */
 }
 .credit {
     position: absolute;
@@ -89,7 +93,7 @@ body {
     color: var(--clr-text-light);
 }
 .intro-container {
-    margin: 4.2rem var(--pageInfo-horizontalSpace);
+    margin: 4rem var(--pageInfo-horizontalSpace);
 }
 .intro:not(:last-child) {
     margin-bottom: 2rem;
@@ -208,13 +212,13 @@ body {
     font-size: 1.8rem;
     font-weight: bold;
     cursor: pointer;
-    background: var(--clr-grey);
-    box-shadow: 3px 3px 5px 1px rgb(200, 200, 200, 0.3);
+    background: var(--clr-sec);
+    box-shadow: 3px 3px 5px 1px var(--clr-sec-shadow);
     color: var(--clr-text-light);
 }
 @media only screen and (hover: hover) {
     .submit-submitButton:hover {
-        background: var(--clr-grey-dark);
+        background: var(--clr-sec-dark);
         box-shadow: none;
         color: var(--clr-text-light);
     }

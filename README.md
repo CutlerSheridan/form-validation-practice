@@ -20,6 +20,12 @@ Layout is responsive. Displays differently on mobile vs. desktop.
 
 #### DONE
 
+_1.0.0_
+
+-   change splash font
+-   change secondary color from grey to orange-ish
+-   fix splash image height on desktop
+
 _0.5.0_
 
 -   adjust intro text max-width
